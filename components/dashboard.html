@@ -1,2 +1,110 @@
+<section class="main-content dashboard">
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="header-left">
+      <h1>Dashboard</h1>
+    </div>
 
+    <div class="header-right">
+      <button id="btnNuevaReserva" class="btn btn-primary">
+        <span class="fas fa-plus"></span> 💻Nueva Reserva
+      </button>
+    </div>
+    <div >
 
+    </div>
+  </header>
+
+  <!-- WIDGETS -->
+  <section class="dashboard-widgets-top">
+    <div class="widget">
+      <div>
+        <p class="widget-label"><span>🔔 Reservas Activas</span></p>
+        <p class="widget-count">15</p>
+      </div>
+      <div class="widget-trend">+10%</div>
+    </div>
+
+    <div class="widget">
+      <div>
+        <p class="widget-label"><span>💡Habitaciones Disponibles</span></p>
+        <p class="widget-count">8</p>
+      </div>
+      <div class="widget-trend">+5%</div>
+    </div>
+
+    <div class="widget">
+      <div>
+        <p class="widget-label">🔕Habitaciones Ocupadas</p>
+        <p class="widget-count">12</p>
+      </div>
+      <div class="widget-trend">-3%</div>
+    </div>
+
+    <div class="widget">
+      <div>
+        <p class="widget-label">💵Ingresos del Mes</p>
+        <p class="widget-count">S/. 4,500</p>
+      </div>
+      <div class="widget-trend">+20%</div>
+    </div>
+  </section>
+
+  <!-- TARJETA -->
+  <section class="card-Reserva-pendiente">
+    <h3>Reservas Pendientes</h3>
+    <span class="pending-badge">Por confirmar</span>
+  </section>
+
+  <!-- COLUMNAS -->
+  <div class="content-columns">
+    <div class="column-left">
+      <section class="card">
+        <div class="card-header">
+          <h3>Próximas Llegadas</h3>
+          <span class="today-badge">Hoy</span>
+        </div>
+        <div class="card-body">
+          <div class="no-data">
+            <p>Sin llegadas reservadas próximas</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <h3>Reservas Pendientes</h3>
+          <span class="pending-badge">Por Confirmar</span>
+        </div>
+        <div class="card-body">
+          <div class="no-data">
+            <p>Sin reservas pendientes</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="column-right">
+      <section class="card">
+        <div class="card-header">
+          <h3>Ocupación por Tipo</h3>
+        </div>
+        <div class="card-body">
+          <ul class="occupancy-list">
+            <li><span>Simple - 5 ocupadas</span></li>
+            <li><span>Doble - 3 ocupadas</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card chart-card">
+        <div class="card-header">
+          <h3>Reservas por Estado</h3>
+        </div>
+        <div class="card-body">
+          <canvas></canvas>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,198 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #d9d2b6;
+}
+
+.contenedor-habitaciones {
+  padding: 20px 40px;
+}
+
+/* Cabecera */
+.cabecera-habitaciones {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cabecera-habitaciones h1 {
+  margin: 0;
+  font-size: 40px;
+  color: #2e3d1f;
+}
+
+.cabecera-derecha {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.fecha-actual {
+  font-size: 14px;
+  color: #4a5a2a;
+}
+
+.boton-notificacion {
+  background: #e8e2c8;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-nueva-habitacion {
+  background-color: #3f5c2d;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Filtros */
+.seccion-filtros {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.caja-busqueda {
+  display: flex;
+  align-items: center;
+  background: #e8e2c8;
+  padding: 10px 15px;
+  border-radius: 15px;
+}
+
+.caja-busqueda input {
+  border: none;
+  background: transparent;
+  outline: none;
+  margin-left: 8px;
+}
+
+select {
+  padding: 10px 15px;
+  border-radius: 15px;
+  border: none;
+  background: #e8e2c8;
+  cursor: pointer;
+}
+
+/* Cuadrícula de Habitaciones */
+.grid-habitaciones {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* Tarjeta de Habitación */
+.tarjeta-habitacion {
+  background: #e8e2c8;
+  border-radius: 25px;
+  padding: 25px;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.tarjeta-habitacion:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Borde superior decorativo según estado */
+.tarjeta-habitacion::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+}
+
+.tarjeta-habitacion.disponible::before {
+  background-color: #3f5c2d;
+}
+.tarjeta-habitacion.mantenimiento::before {
+  background-color: #d4a017;
+}
+.tarjeta-habitacion.reservada::before {
+  background-color: #333;
+}
+
+.habitacion-numero {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  color: #2e3d1f;
+  margin-bottom: 5px;
+}
+
+.habitacion-tipo {
+  font-size: 11px;
+  font-weight: 800;
+  color: #6b7a40;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.habitacion-precio {
+  font-size: 18px;
+  font-weight: 800;
+  color: #2e3d1f;
+  margin-bottom: 15px;
+}
+
+.habitacion-precio span {
+  font-size: 12px;
+  font-weight: 400;
+  color: #6b7a40;
+}
+
+.habitacion-descripcion {
+  font-size: 13px;
+  color: #4a5a2a;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  flex-grow: 1;
+}
+
+/* Badge de Estado */
+.etiqueta-estado {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  width: fit-content;
+}
+
+.etiqueta-estado::before {
+  content: "•";
+  font-size: 18px;
+}
+
+.disponible .etiqueta-estado {
+  background-color: #d5e6c7;
+  color: #3f5c2d;
+}
+
+.mantenimiento .etiqueta-estado {
+  background-color: #f7e8bc;
+  color: #a67c00;
+}
+
+.reservada .etiqueta-estado {
+  background-color: #e0e0e0;
+  color: #333;
+}

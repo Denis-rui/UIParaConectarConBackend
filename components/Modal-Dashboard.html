@@ -1,0 +1,146 @@
+<section>
+  <div id="modalReserva" class="modal">
+    <div class="modal-contenido">
+      <!-- CERRAR -->
+      <span id="cerrarModal" class="cerrarModal">&times;</span>
+
+      <h2 class="titulo-modal">Nueva Reserva</h2>
+
+      <!-- FORM -->
+      <form id="formReserva">
+        <!-- BUSCAR CLIENTE -->
+        <div class="form-group">
+          <label for="buscarCliente">BUSCAR / SELECCIONAR CLIENTE</label>
+          <input
+            type="text"
+            id="buscarCliente"
+            name="buscarCliente"
+            placeholder="🔍 Escribe un nombre para buscar..."
+          />
+        </div>
+
+        <div class="form-group">
+          <select name="cliente" required>
+            <option value="">Seleccionar cliente</option>
+            <option value="cliente1">Cliente 1</option>
+            <option value="cliente2">Cliente 2</option>
+            <option value="cliente3">Cliente 3</option>
+          </select>
+        </div>
+
+        <!-- NOMBRE -->
+        <div class="form-row">
+          <div class="form-group">
+            <div class="formRE">
+              <label for="nombre">NOMBRES Y APELLIDOS:</label>
+              <button
+                type="button"
+                class="btn-registrar"
+                id="btn-registrar-cliente-manual"
+              >
+                + Registrar
+              </button>
+            </div>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Ingrese el nombre del cliente"
+              required
+            />
+          </div>
+
+          <!-- EMAIL -->
+          <div class="form-group">
+            <div class="formCORREO">
+              <label for="email">CORREO ELECTRÓNICO:</label>
+            </div>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="abejita@gmail.com"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- TIPO RESERVA -->
+        <div class="form-group">
+          <label for="tiReserva">TIPO DE RESERVA:</label>
+          <input type="text" id="tiReserva" name="tiReserva" />
+        </div>
+
+        <!-- FECHAS -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fechaEntrada">CHECK-IN (FECHA):</label>
+            <input type="date" id="fechaEntrada" name="fechaEntrada" required />
+          </div>
+
+          <div class="form-group">
+            <label for="horaEntrada">HORA DE ENTRADA:</label>
+            <input type="time" id="horaEntrada" name="horaEntrada" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fechaSalida">CHECK-OUT (FECHA):</label>
+            <input type="date" id="fechaSalida" name="fechaSalida" required />
+          </div>
+
+          <div class="form-group">
+            <label for="horaSalida">HORA DE SALIDA:</label>
+            <input type="time" id="horaSalida" name="horaSalida" required />
+          </div>
+        </div>
+
+        <!-- HABITACIÓN -->
+        <div class="form-group">
+          <label for="seleccioneHabitacion">SELECCIONE HABITACION:</label>
+          <select
+            id="seleccioneHabitacion"
+            name="seleccioneHabitacion"
+            required
+          >
+            <option value="">-----------</option>
+            <option value="habitacion1">Habitación Simple</option>
+            <option value="habitacion2">Habitación Doble</option>
+            <option value="habitacion3">Habitación Matrimonial</option>
+          </select>
+        </div>
+
+        <!-- PAGO -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="TipoPago">TIPO DE PAGO</label>
+            <select name="TipoPago" id="TipoPago">
+              <option value="">Seleccionar método de pago</option>
+              <option value="contado">Efectivo</option>
+              <option value="billeteraYape">Yape</option>
+              <option value="billeteraPlin">Plin</option>
+              <option value="transferencia">Transferencia Bancaria</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="total">TOTAL A PAGAR (S/.):</label>
+          <input
+            type="number"
+            id="total"
+            name="total"
+            placeholder="0.00"
+            readonly
+          />
+        </div>
+
+        <!-- BOTÓN -->
+        <div class="form-actions">
+          <button type="submit">Guardar Reserva</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

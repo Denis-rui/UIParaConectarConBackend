@@ -1,0 +1,40 @@
+<section class="reservas">
+  <header class="header-reservas">
+    <h2 class="titulo-reservas">Reservas</h2>
+    <button id="btnNuevaReserva" type="button" class="boton-nueva-reserva">
+      Nueva Reserva
+    </button>
+  </header>
+
+  <div class="buscar-filtro">
+    <input
+      class="buscar"
+      id="inputBuscarReserva"
+      type="text"
+      placeholder="🔍 Buscar "
+    />
+    <select id="filtroEstado" class="filtro-estado">
+      <option value="">Todos los estados</option>
+      <option value="Confirmada">Confirmada</option>
+      <option value="Pendiente">Pendiente</option>
+      <option value="Cancelada">Cancelada</option>
+    </select>
+  </div>
+
+  <div class="tabla">
+    <table class="tbl-reservas">
+      <thead>
+        <tr>
+          <th>Cliente</th>
+          <th>Habitación</th>
+          <th>Check-in</th>
+          <th>Check-out</th>
+          <th>Total</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="contenido-reservas"></tbody>
+    </table>
+  </div>
+</section>
